@@ -1,0 +1,8 @@
+RewriteEngine ON
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php 
+RewriteRule ^idioma/([a-zA-Z0-9]+)$ index2.php?idioma=$1
+RewriteRule ^category/(.+)$ shop.php?id=$1
+RewriteRule ^detail/(.+)/([0-9]+)$ detalle.php?id_det=$2
